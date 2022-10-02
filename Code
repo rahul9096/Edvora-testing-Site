@@ -1,0 +1,40 @@
+public class Testing {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+
+		System.setProperty("webdriver.chrome.driver", "D:\\Velocity Class\\Selenium Note's\\ChromeDriver\\chromedriver_win32\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://testing-assessment-foh15kew9-edvora.vercel.app/");
+//		driver.manage().window().maximize();
+
+// Login Page 
+		
+		WebElement userName = driver.findElement(By.xpath(//input[@autocomplete='username']"));
+		userName.sendKeys("rchaudhari905@gmail.com");
+		
+		WebElement passward = driver.findElement(By.xpath("//input[@autocomplete='current-password']"));
+		passward.sendKeys("rahul123");
+		
+		WebElement login = driver.findElement(By.xpath("//button[@class='chakra-button css-8h0nsd']"));
+		login.click();
+		Thread.sleep(3000);
+    
+  // Register Page 
+    
+		WebElement SignIn = driver.findElement(By.xpath("//button[@class='chakra-button css-d509a4']"));
+		SignIn.click();
+    
+    WebElement userName = driver.findElement(By.xpath(//input[@autocomplete='username']"));
+		userName.sendKeys("rchaudhari905@gmail.com");
+    
+    WebElement passward = driver.findElement(By.xpath("//input[@autocomplete='current-password']"));
+		passward.sendKeys("rahul123");
+    
+    WebElement createAccountButton = driver.findElement(By.xpath("//button[@type='button']"));
+		reateAccountButton.click();
+    
+    
